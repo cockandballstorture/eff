@@ -1,11 +1,9 @@
 x=list(map(int,input().split()))
 w=list(map(int,input().split()))
 for i in range(len(x)):
-     a = x[i]
-     b = w[i]
-     while a * b > 0:
-         if a > b:
-           a = a % b
+     while x[i] * w[i] > 0:
+         if x[i] > w[i]:
+           x[i] = x[i] % w[i]
          else:
-           b = b % a
-     print(a + b)
+           w[i] = w[i] % x[i]
+     print(x[i] + w[i])
