@@ -1,0 +1,16 @@
+a=int(input())
+def fibo(a):
+    w = 0
+    z=1
+    k=1
+    while k<a:
+        k += 1
+        w=z+w
+        k += 1
+        z=z+w
+    if a%2==0:
+         z=z-w
+         return(z)
+    else:
+         return(w)
+print(fibo(a))
