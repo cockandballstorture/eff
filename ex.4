@@ -1,0 +1,9 @@
+x=list(map(int,input().split()))
+w=list(map(int,input().split()))
+z = x[0] ** 2 + w[0] ** 2
+for i in range(1,len(x)-1):
+   if z>x[i+1]**2+w[i+1]**2:
+      z=z
+   else :
+      z=x[i+1]**2+w[i+1]**2
+print(z)
