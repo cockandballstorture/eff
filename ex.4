@@ -1,11 +1,7 @@
 q=list(map(float,input().split()))
 y=list(map(float,input().split()))
-z = q[0] ** 2 + y[0] ** 2
-def max (x):
-   if z>x:
-      z=z
-   else :
-      z=x
-   return(z)
-k=map(max,q**2+y**2)
+def sm(a,b):
+    a=a**2+b**2
+    return (a)
+k=list(map(sm,q,y))
 print(max(k))
