@@ -1,9 +1,12 @@
-x=list(map(int,input().split()))
-w=list(map(int,input().split()))
-for i in range(len(x)):
-     while x[i] * w[i] > 0:
-         if x[i] > w[i]:
-           x[i] = x[i] % w[i]
+y=list(map(int,input().split()))
+q=list(map(int,input().split()))
+i=0
+def nod(x,w):
+     while x * w > 0:
+         if x > w:
+           x = x % w
          else:
-           w[i] = w[i] % x[i]
-     print(x[i] + w[i])
+           w = w % x
+     return(w+x)
+k=list(map(nod, y, q))
+print(k)
